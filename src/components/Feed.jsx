@@ -1,8 +1,13 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 const Feed = () => {
   return (
-    <div>Feed</div>
+    <div className="flex">
+      <div className='w-24 '>
+         <Sidebar/>  
+      </div>    
+    </div>
   )
 }
 
