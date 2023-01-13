@@ -4,9 +4,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 const Navbar = () => {
   const flexCenter="flex justify-between items-center"
   return (
-    <div className={`${flexCenter} bg-white px-5 pl-8 py-2 sticky top-0`}>
+    <div className={`${flexCenter} bg-white px-5 pl-8 py-2 sticky top-0 z-40`}>
       <div className={`${flexCenter} gap-6 `}>
-        <MenuIcon />
+        <MenuIcon className='cursor-pointer'/>
         <img alt='' src="/icons/logo.png" className={`h-5 w-full`} />
 
       </div>
