@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { Category } from '../data'
+
 import { fetchFromApi } from '../fetchFromApi'
 import Sidebar from './Sidebar'
 import Videos from './Videos'
 
 const Feed = () => {
   // fetchFromApi
-  const [selectedCategory, setSelectedCategory] = useState("New")
+  const [selectedCategory, setSelectedCategory] = useState("All")
   const [videos, setVideos] = useState([])
   useEffect(() => {
     const fetchData=async()=>{
@@ -20,16 +22,25 @@ const Feed = () => {
   
   return (
     <div className="flex w-full">
-      <div className='w-24 '>
+      <div className='w-24 hidden sm:block'>
          <Sidebar/>  
       </div> 
     
     <div className='w-full'>
-      <div className=''>
-        <span className='bg-gray-200 text-lg  py-1 px-3 rounded-xl'>
+      <div className='fixed z-10 bg-white w-full lg:w-fit p-2'>
+        <div className='flex  gap-2 overflow-x-scroll hide-scrollbar' style={{
+          
+        }}>
 
-        All Videos
-        </span>
+          
+          {
+            Category.map((category,id)=>{
+              return  <span key={id} className='bg-gray-200 text-lg  py-1 px-4 rounded-lg  min-w-fit max-w-fit cursor-pointer  ' onClick={()=>setSelectedCategory(category)}>
+              {category}
+            </span>
+            })
+          }
+        </div>
       </div>
       <Videos videos={videos}/>
 

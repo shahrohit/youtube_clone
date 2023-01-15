@@ -11,7 +11,7 @@ const Navbar = () => {
 
       </div>
 
-      <div className={`${flexCenter} justify-center w-1/2`} >
+      <div className={`${flexCenter} justify-center w-1/2 hidden sm:flex`} >
         <input type="text"  placeholder='Search' className='w-full outline-none p-2 px-4  border rounded-l-3xl border-gray-300'/>
         <div className='border rounded-r-3xl py-2  w-20 flex justify-center bg-gray-50 border-gray-300'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6 ">
