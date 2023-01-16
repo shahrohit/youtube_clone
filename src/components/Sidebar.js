@@ -3,14 +3,14 @@ import React from "react";
 const Sidebar = () => {
   // const homeIcon= ;
   const alignIcon =
-    "flex flex-col items-center hover:bg-gray-200 p-2 rounded-lg cursor-pointer";
+    "flex flex-col items-center hover:bg-gray-200 sm:p-2 p-1 rounded-lg cursor-pointer w-full";
   return (
-    <div className="fixed left-0 pl-4 mt-4 flex flex-col justify-center items-center gap-5 w-20">
+    <div className=" fixed bottom-0 sm:top-14 sm:left-0 flex flex-row justify-between  items-end sm:justify-start  gap-2   sm:flex-col w-screen sm:w-24 p-2 bg-white border overflow-auto">
       <div className={`${alignIcon}`}>
         <img
           src="/icons/homeActive.png"
           alt=""
-          className="h-5 w-5 object-contain "
+          className="h-7 w-7 sm:h-7 pt-1 object-contain"
         />
         <p className=""> Home </p>
       </div>
@@ -25,7 +25,7 @@ const Sidebar = () => {
           //   display: "block",
           // }}
           // fill="black"
-          className="h-7 w-7 object-contain"
+          className="h-7 w-7"
         >
           <g
             height="24"
@@ -72,7 +72,7 @@ const Sidebar = () => {
           viewBox="0 0 24 24"
           preserveAspectRatio="xMidYMid meet"
           focusable="false"
-          className="h-7 w-7 object-contain"
+          className="h-8 w-7"
           // style="pointer-events: none; display: block; width: 100%; height: 100%;"
         >
           <g className="style-scope yt-icon">
@@ -90,7 +90,7 @@ const Sidebar = () => {
           viewBox="0 0 24 24"
           preserveAspectRatio="xMidYMid meet"
           focusable="false"
-          className="w-7 h-10"
+          className="w-7 h-7"
         >
           <g className="style-scope yt-icon">
             <path d="M11,7l6,3.5L11,14V7L11,7z M18,20H4V6H3v15h15V20z M21,18H6V3h15V18z M7,17h13V4H7V17z"></path>

@@ -22,25 +22,23 @@ const Feed = () => {
   
   return (
     <div className="flex w-full">
-      <div className='w-24 hidden sm:block'>
+      <div className='w-0 sm:w-28  z-10'>
          <Sidebar/>  
       </div> 
+
+      
     
     <div className='w-full'>
       <div className='fixed z-10 bg-white w-full lg:w-fit p-2'>
-        <div className='flex  gap-2 overflow-x-scroll hide-scrollbar' style={{
-          
-        }}>
-
-          
-          {
-            Category.map((category,id)=>{
-              return  <span key={id} className='bg-gray-200 text-lg  py-1 px-4 rounded-lg  min-w-fit max-w-fit cursor-pointer  ' onClick={()=>setSelectedCategory(category)}>
-              {category}
-            </span>
-            })
-          }
-        </div>
+        <div className='flex  gap-2 overflow-x-scroll hide-scrollbar w-full'>
+            {
+              Category.map((category,id)=>{
+                return  <span key={id} className='bg-gray-200 text-lg  py-1 px-4 rounded-lg  min-w-fit max-w-fit cursor-pointer  ' onClick={()=>setSelectedCategory(category)}>
+                {category}
+              </span>
+              })
+            }
+          </div>
       </div>
       <Videos videos={videos}/>
 
